@@ -33,10 +33,12 @@ public class usuariosREST {
 		return "hg";
         
     }
+
     @GetMapping()
     public List<usuarios> listar(){
 		return usuarioDAO.findAll();
 	}
+	
     @GetMapping("login") 
 	public respuesta validar(@RequestParam (required = false) String mail,@RequestParam (required = true) String password){
 		respuesta rta = new respuesta(); 
